@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buy Gift Card - Dealzy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<header>
+
+<div class="container navbar">
+
+    <a href="index.html" class="logo">
+
+        <i class="fa-solid fa-heart"></i>
+
+        <h1>dealzy</h1>
+
+    </a>
+
+    <div class="search-bar">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input type="text" placeholder="Search for your favorite brands...">
+
+    </div>
+
+    <a href="profile.html" class="profile">
+        <i class="fa-solid fa-user"></i>
+    </a>
+
+</div>
+
+</header>
+
+<!-- Not found state (shown only if ?brand= doesn't match anything) -->
+<div id="productNotFound" style="display:none;">
+    <div class="container" style="padding:80px 0;text-align:center;">
+        <h2 style="margin-bottom:20px;">Brand not found</h2>
+        <p style="color:#777;margin-bottom:30px;">We couldn't find a gift card for that brand.</p>
+        <a href="index.html" style="color:#ff5b21;font-weight:600;">Go back home</a>
+    </div>
+</div>
+
+<!-- PRODUCT HERO -->
+
+<section class="product-hero" id="productHeroContent">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <span>🏠 Home</span>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <strong id="crumbBrand">Gift Card</strong>
+
+        </div>
+
+        <div class="product-container">
+
+            <div class="product-media">
+
+                <div class="product-card-visual">
+                    <img id="brandImage" src="" alt="">
+                </div>
+
+                <div class="redeem-buttons">
+
+                    <button class="pill-outline-btn" onclick="document.getElementById('importantPoints').scrollIntoView({behavior:'smooth'})">
+                        How To Redeem
+                    </button>
+
+                    <button class="pill-outline-btn" onclick="document.getElementById('importantPoints').scrollIntoView({behavior:'smooth'})">
+                        Points to Note
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="product-buybox">
+
+                <h1 id="brandTitle">Brand</h1>
+
+                <p class="buy-category" id="brandCategory">Category</p>
+
+                <p class="buy-discount"><span id="brandDiscount">0% Off</span></p>
+
+                <div class="amount-row">
+
+                    <div class="dropdown-wrap amount-wrap">
+
+                        <button class="amount-select" id="amountToggle">
+                            <span id="amountLabel">₹ 1000</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                        <div class="amount-menu" id="amountMenu"></div>
+
+                    </div>
+
+                    <div class="qty-select">
+                        <button id="qtyDecrease">−</button>
+                        <span id="qtyLabel">x1</span>
+                        <button id="qtyIncrease">+</button>
+                    </div>
+
+                </div>
+
+                <div class="payment-method">
+
+                    <span>Payment method</span>
+
+                    <div class="payment-box">
+                        <span>Pay from</span>
+                        <div class="payment-choice">
+                            UPI
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="#" class="coupon-link" onclick="return false;">Have a coupon or reward code?</a>
+
+                <div class="price-summary">
+
+                    <span>You pay only</span>
+
+                    <div class="price-row">
+                        <h2 id="payAmount">₹ 0.00</h2>
+                        <s id="mrpAmount">₹0.00</s>
+                    </div>
+
+                </div>
+
+                <button class="buy-btn" id="buyBtn">Get the app</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- IMPORTANT POINTS -->
+
+<section class="important-points-section" id="importantPoints">
+
+    <div class="container">
+
+        <h2>Important Points</h2>
+
+        <div class="points-grid">
+
+            <div class="point-item">
+                <div class="point-icon"><i class="fa-solid fa-desktop"></i></div>
+                <div>
+                    <h4>Pay Online</h4>
+                    <p>Use it on apps and website.</p>
+                </div>
+            </div>
+
+            <div class="point-item">
+                <div class="point-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                <div>
+                    <h4>Multi Use</h4>
+                    <p>The balance can be used multiple times.</p>
+                </div>
+            </div>
+
+            <div class="point-item">
+                <div class="point-icon"><i class="fa-regular fa-calendar"></i></div>
+                <div>
+                    <h4>Valid for upto 6 months</h4>
+                    <p>Good for a duration of upto 6 months after purchase.</p>
+                </div>
+            </div>
+
+            <div class="point-item">
+                <div class="point-icon"><i class="fa-solid fa-ban"></i></div>
+                <div>
+                    <h4>Cannot be Clubbed with Offers</h4>
+                    <p>Cannot be clubbed with ongoing brand offers.</p>
+                </div>
+            </div>
+
+            <div class="point-item">
+                <div class="point-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div>
+                    <h4>Multiple Cards can't be clubbed</h4>
+                    <p>In a single transaction</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about-section">
+
+    <div class="container">
+
+        <h2>About this Gift Card</h2>
+
+        <p id="aboutText"></p>
+
+        <div class="promo-card blue security-banner">
+            <div class="promo-icon">🛡</div>
+            <h3>Your security is our priority</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ BLOCK A -->
+
+<section class="faq-plain-section">
+
+    <div class="container">
+
+        <h2>FAQs</h2>
+
+        <div class="faq-acc-list" id="faqListA"></div>
+
+    </div>
+
+</section>
+
+<!-- SIMILAR CARDS -->
+
+<section class="similar-section" id="similarSection">
+
+    <div class="container">
+
+        <h2 class="section-title">Similar cards you might also like</h2>
+
+        <div class="deal-slider" id="similarTrack"></div>
+
+    </div>
+
+</section>
+
+<!-- FAQ BLOCK B -->
+
+<section class="faq-plain-section">
+
+    <div class="container">
+
+        <div class="faq-acc-list" id="faqListB"></div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer">
+
+<div class="footer-col">
+
+<h2><i class="fa-solid fa-heart"></i> dealzy</h2>
+
+<p>
+
+Dealzy is your go-to platform for digital gift cards and
+vouchers, offering unbeatable deals and savings on top
+brands. Join us and start saving today!
+
+</p>
+
+<div class="socials">
+
+<i class="fab fa-instagram"></i>
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-x-twitter"></i>
+<i class="fab fa-pinterest-p"></i>
+
+</div>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Contact Us</h3>
+
+<p>For Support Queries:<br>support@dealzy.app</p>
+
+<br>
+
+<p>For Business Enquiries:<br>contact@dealzy.app</p>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Location</h3>
+
+<p>
+
+5 Floor, Smiline Dental Hospitals, HITEC City,<br>
+
+Hyderabad, Telangana 500081
+
+</p>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Company</h3>
+
+<ul>
+
+<li>Blog</li>
+
+<li>Corporate Gifting</li>
+
+<li>Business/Bulk Orders</li>
+
+<li>Bulk Gift Card APIs</li>
+
+</ul>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li>Privacy Policy</li>
+
+<li>Terms & Conditions</li>
+
+<li>Refund Policies</li>
+
+</ul>
+
+</div>
+
+<div class="footer-badges">
+
+<div class="qr-box">
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://dealzy.app" alt="QR code">
+
+</div>
+
+<img class="store-btn" src="https://placehold.co/140x42/000/fff?text=Google+Play" alt="Get it on Google Play">
+
+<img class="store-btn" src="https://placehold.co/140x42/000/fff?text=App+Store" alt="Download on the App Store">
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 — Copyright All rights reserved
+
+</div>
+
+</footer>
+
+<button class="support-fab">
+    <i class="fa-solid fa-headset"></i>
+</button>
+
+<script src="categoryData.js"></script>
+<script src="productPage.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html> 

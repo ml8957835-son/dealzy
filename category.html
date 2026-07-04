@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dealzy - Shop by Category</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<header>
+
+<div class="container navbar">
+
+    <a href="index.html" class="logo">
+
+        <i class="fa-solid fa-heart"></i>
+
+        <h1>dealzy</h1>
+
+    </a>
+
+
+    <div class="search-bar">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+        type="text"
+        placeholder="Search for your favorite brands...">
+
+    </div>
+
+
+    <a href="profile.html" class="profile">
+    <i class="fa-solid fa-user"></i>
+</a>
+
+</div>
+
+</header>
+
+<!-- CATEGORY HERO -->
+
+<section class="category-hero">
+
+    <div class="container">
+
+        <h1 class="cat-heading">
+            Save more on your favorite<br>
+            <span class="orange" id="categoryName">Category</span> Brands
+        </h1>
+
+        <div class="category-filter-bar">
+
+            <div class="dropdown-wrap">
+
+                <button class="filter-icon-btn" id="sortToggleBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="sort-dropdown" id="sortDropdown">
+
+                    <button class="sort-option" data-sort="alpha-asc">
+                        <i class="fa-solid fa-arrow-down-a-z"></i> Sort alphabetically ascending
+                    </button>
+
+                    <button class="sort-option" data-sort="alpha-desc">
+                        <i class="fa-solid fa-arrow-up-a-z"></i> Sort alphabetically descending
+                    </button>
+
+                    <button class="sort-option" data-sort="discount-asc">
+                        <i class="fa-solid fa-arrow-down-1-9"></i> Sort Discount Percent (Low-High)
+                    </button>
+
+                    <button class="sort-option" data-sort="discount-desc">
+                        <i class="fa-solid fa-arrow-up-1-9"></i> Sort Discount Percent (High-Low)
+                    </button>
+
+                    <button class="sort-option active" data-sort="popularity">
+                        Sort Popularity
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="dropdown-wrap explore-wrap">
+
+                <button class="filter-pill explore-pill" id="exploreToggleBtn">
+                    Explore More <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="explore-dropdown" id="exploreDropdown">
+
+                    <a href="category.html?category=Fashion">Fashion</a>
+                    <a href="category.html?category=Food">Food</a>
+                    <a href="category.html?category=Jewellery">Jewellery</a>
+                    <a href="category.html?category=Health%20%26%20Beauty">Health &amp; Beauty</a>
+                    <a href="category.html?category=Travel">Travel</a>
+                    <a href="category.html?category=Luxury%20Brands">Luxury Brands</a>
+                    <a href="category.html?category=Electronics">Electronics</a>
+                    <a href="category.html?category=Accessories">Accessories</a>
+                    <a href="category.html?category=Subscription">Subscription</a>
+                    <a href="category.html?category=Hotels">Hotels</a>
+                    <a href="category.html?category=Home%20Furnishing">Home Furnishing</a>
+                    <a href="category.html?category=Gaming">Gaming</a>
+                    <a href="category.html?category=Grocery">Grocery</a>
+                    <a href="category.html?category=Shopping">Shopping</a>
+                    <a href="category.html?category=Entertainment">Entertainment</a>
+                    <a href="category.html?category=Online%20Shopping">Online Shopping</a>
+                    <a href="category.html?category=Footwear">Footwear</a>
+                    <a href="category.html?category=Kids">Kids</a>
+                    <a href="category.html?category=Gifting">Gifting</a>
+                    <a href="category.html?category=Pharmacy">Pharmacy</a>
+                    <a href="category.html?category=Sports%20%26%20Fitness">Sports &amp; Fitness</a>
+
+                </div>
+
+            </div>
+
+            <div class="filter-scroll" id="filterScroll">
+
+                <a href="category.html?category=Fashion" class="filter-pill">Fashion</a>
+                <a href="category.html?category=Food" class="filter-pill">Food</a>
+                <a href="category.html?category=Jewellery" class="filter-pill">Jewellery</a>
+                <a href="category.html?category=Health%20%26%20Beauty" class="filter-pill">Health &amp; Beauty</a>
+                <a href="category.html?category=Travel" class="filter-pill">Travel</a>
+                <a href="category.html?category=Luxury%20Brands" class="filter-pill">Luxury Brands</a>
+                <a href="category.html?category=Electronics" class="filter-pill">Electronics</a>
+                <a href="category.html?category=Accessories" class="filter-pill">Accessories</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RESULTS -->
+
+<section class="category-results">
+
+    <div class="container">
+
+        <div class="all-grid" id="categoryGrid">
+
+            <!-- brand cards injected by JS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer">
+
+<div class="footer-col">
+
+<h2><i class="fa-solid fa-heart"></i> dealzy</h2>
+
+<p>
+
+Dealzy is your go-to platform for digital gift cards and
+vouchers, offering unbeatable deals and savings on top
+brands. Join us and start saving today!
+
+</p>
+
+<div class="socials">
+
+<i class="fab fa-instagram"></i>
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-x-twitter"></i>
+<i class="fab fa-pinterest-p"></i>
+
+</div>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Contact Us</h3>
+
+<p>For Support Queries:<br>support@dealzy.app</p>
+
+<br>
+
+<p>For Business Enquiries:<br>contact@dealzy.app</p>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Location</h3>
+
+<p>
+
+5 Floor, Smiline Dental Hospitals, HITEC City,<br>
+
+Hyderabad, Telangana 500081
+
+</p>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Company</h3>
+
+<ul>
+
+<li>Blog</li>
+
+<li>Corporate Gifting</li>
+
+<li>Business/Bulk Orders</li>
+
+<li>Bulk Gift Card APIs</li>
+
+</ul>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li>Privacy Policy</li>
+
+<li>Terms & Conditions</li>
+
+<li>Refund Policies</li>
+
+</ul>
+
+</div>
+
+<div class="footer-badges">
+
+<div class="qr-box">
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://dealzy.app" alt="QR code">
+
+</div>
+
+<img class="store-btn" src="https://placehold.co/140x42/000/fff?text=Google+Play" alt="Get it on Google Play">
+
+<img class="store-btn" src="https://placehold.co/140x42/000/fff?text=App+Store" alt="Download on the App Store">
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 — Copyright All rights reserved
+
+</div>
+
+</footer>
+
+<button class="support-fab">
+    <i class="fa-solid fa-headset"></i>
+</button>
+
+<script src="categoryData.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
