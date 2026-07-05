@@ -74,31 +74,37 @@
 
             <div class="product-media">
 
-                <div class="product-card-visual">
-                    <img id="brandImage" src="" alt="">
+                <div class="product-card-visual gift-card-mockup" id="brandCardVisual">
+
+                    <div class="card-brand-logo" id="cardBrandLogo">Brand</div>
+
+                    <div class="card-gift-label">GIFT CARD</div>
+
+                    <div class="card-watermark">
+                        <i class="fa-solid fa-heart"></i> dealzy
+                    </div>
+
+                    <div class="card-validity">Valid for upto 6 months</div>
+
                 </div>
 
-                <div class="redeem-buttons">
-
-                    <button class="pill-outline-btn" onclick="document.getElementById('importantPoints').scrollIntoView({behavior:'smooth'})">
-                        How To Redeem
-                    </button>
-
-                    <button class="pill-outline-btn" onclick="document.getElementById('importantPoints').scrollIntoView({behavior:'smooth'})">
-                        Points to Note
-                    </button>
-
+                <div class="redeem-online-pill">
+                    <i class="fa-solid fa-display"></i> Redeem Online
                 </div>
 
             </div>
 
             <div class="product-buybox">
 
-                <h1 id="brandTitle">Brand</h1>
+                <div class="buy-header-row">
+
+                    <h1 id="brandTitle">Brand</h1>
+
+                    <span class="buy-discount-inline" id="brandDiscount">0% Off</span>
+
+                </div>
 
                 <p class="buy-category" id="brandCategory">Category</p>
-
-                <p class="buy-discount"><span id="brandDiscount">0% Off</span></p>
 
                 <div class="amount-row">
 
@@ -113,7 +119,7 @@
 
                     </div>
 
-                    <div class="qty-select">
+                    <div class="qty-chip">
                         <button id="qtyDecrease">−</button>
                         <span id="qtyLabel">x1</span>
                         <button id="qtyIncrease">+</button>
@@ -150,6 +156,18 @@
 
                 <button class="buy-btn" id="buyBtn">Get the app</button>
 
+                <div class="redeem-info-row">
+
+                    <button class="solid-pill-btn" onclick="document.getElementById('importantPoints').scrollIntoView({behavior:'smooth'})">
+                        How To Redeem
+                    </button>
+
+                    <button class="solid-pill-btn" onclick="document.getElementById('importantPoints').scrollIntoView({behavior:'smooth'})">
+                        Points to Note
+                    </button>
+
+                </div>
+
             </div>
 
         </div>
@@ -169,7 +187,7 @@
         <div class="points-grid">
 
             <div class="point-item">
-                <div class="point-icon"><i class="fa-solid fa-desktop"></i></div>
+                <div class="point-icon"><i class="fa-solid fa-computer-mouse"></i></div>
                 <div>
                     <h4>Pay Online</h4>
                     <p>Use it on apps and website.</p>
@@ -177,7 +195,7 @@
             </div>
 
             <div class="point-item">
-                <div class="point-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                <div class="point-icon"><i class="fa-solid fa-gift"></i></div>
                 <div>
                     <h4>Multi Use</h4>
                     <p>The balance can be used multiple times.</p>
@@ -193,18 +211,18 @@
             </div>
 
             <div class="point-item">
-                <div class="point-icon"><i class="fa-solid fa-ban"></i></div>
+                <div class="point-icon"><i class="fa-solid fa-percent"></i></div>
                 <div>
-                    <h4>Cannot be Clubbed with Offers</h4>
-                    <p>Cannot be clubbed with ongoing brand offers.</p>
+                    <h4>Clubbed with Offers</h4>
+                    <p>Can be clubbed with ongoing brand offers.</p>
                 </div>
             </div>
 
             <div class="point-item">
-                <div class="point-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div class="point-icon"><i class="fa-solid fa-clone"></i></div>
                 <div>
-                    <h4>Multiple Cards can't be clubbed</h4>
-                    <p>In a single transaction</p>
+                    <h4>Combine Multiple Cards</h4>
+                    <p>Use several gift cards in one purchase.</p>
                 </div>
             </div>
 
@@ -391,4 +409,4 @@ Hyderabad, Telangana 500081
 <script src="script.js"></script>
 
 </body>
-</html> 
+</html>

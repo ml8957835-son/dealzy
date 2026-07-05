@@ -219,10 +219,11 @@ function initProductPage() {
     document.getElementById("brandCategory").textContent = brand.label;
     document.getElementById("brandDiscount").textContent = brand.outOfStock ? "Currently Unavailable" : brand.discount;
 
-    const imgUrl = `https://placehold.co/500x320/${brand.color}/fff?text=${encodeURIComponent(brand.name)}`;
-    const brandImg = document.getElementById("brandImage");
-    brandImg.src = imgUrl;
-    brandImg.alt = `${brand.name} Gift Card`;
+    // Fill in the gift-card mockup visual (logo text tinted with the
+    // brand's accent color instead of a placeholder image)
+    const cardBrandLogo = document.getElementById("cardBrandLogo");
+    cardBrandLogo.textContent = brand.name;
+    cardBrandLogo.style.color = `#${brand.color}`;
 
     const discountPct = parseDiscountNumber(brand.discount);
 
