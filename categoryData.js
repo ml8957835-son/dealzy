@@ -269,9 +269,8 @@ function renderCategoryPage() {
 
     });
 
-    // Highlight matching item in the Explore More dropdown
-    document.querySelectorAll(".explore-dropdown a").forEach(item => {
-
+// Highlight matching item in the merged dropdown
+    document.querySelectorAll("#megaCategoryList a").forEach(item => {
         item.classList.remove("active");
 
         const itemCategory = new URLSearchParams(item.getAttribute("href")?.split("?")[1] || "").get("category");
@@ -286,81 +285,56 @@ function renderCategoryPage() {
 
 renderCategoryPage();
 
-// ===== Dropdown interactions (Explore More + Sort), mutually exclusive =====
+// ===== Merged dropdown (categories + sort filters) =====
 
-const sortToggleBtn = document.getElementById("sortToggleBtn");
-const sortDropdown = document.getElementById("sortDropdown");
-const exploreToggleBtn = document.getElementById("exploreToggleBtn");
-const exploreDropdown = document.getElementById("exploreDropdown");
+const menuToggleBtn = document.getElementById("menuToggleBtn");
+const megaDropdown = document.getElementById("megaDropdown");
 
-function closeAllDropdowns() {
-    if (sortDropdown) sortDropdown.classList.remove("open");
-    if (exploreDropdown) exploreDropdown.classList.remove("open");
-    if (exploreToggleBtn) exploreToggleBtn.classList.remove("open");
+function closeMenu() {
+    if (megaDropdown) megaDropdown.classList.remove("open");
+    if (menuToggleBtn) menuToggleBtn.classList.remove("open");
 }
 
-if (sortToggleBtn && sortDropdown) {
+if (menuToggleBtn && megaDropdown) {
 
-    sortToggleBtn.addEventListener("click", (e) => {
+    menuToggleBtn.addEventListener("click", (e) => {
 
         e.stopPropagation();
 
-        const isOpen = sortDropdown.classList.contains("open");
+        const isOpen = megaDropdown.classList.contains("open");
 
-        closeAllDropdowns();
-
-        if (!isOpen) sortDropdown.classList.add("open");
-
-    });
-
-}
-
-if (exploreToggleBtn && exploreDropdown) {
-
-    exploreToggleBtn.addEventListener("click", (e) => {
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        const isOpen = exploreDropdown.classList.contains("open");
-
-        closeAllDropdowns();
+        closeMenu();
 
         if (!isOpen) {
-            exploreDropdown.classList.add("open");
-            exploreToggleBtn.classList.add("open");
+            megaDropdown.classList.add("open");
+            menuToggleBtn.classList.add("open");
         }
 
     });
 
 }
 
-// Sort option clicks
-document.querySelectorAll(".sort-option").forEach(option => {
+// Sort option clicks (now live inside the merged dropdown)
+document.querySelectorAll(".mega-dropdown .sort-option").forEach(option => {
 
     option.addEventListener("click", () => {
 
-        document.querySelectorAll(".sort-option").forEach(o => o.classList.remove("active"));
+        document.querySelectorAll(".mega-dropdown .sort-option").forEach(o => o.classList.remove("active"));
         option.classList.add("active");
 
         sortBrands(option.getAttribute("data-sort"));
 
-        closeAllDropdowns();
+        closeMenu();
 
     });
 
 });
 
-// Close dropdowns when clicking anywhere outside them
+// Close when clicking outside
 document.addEventListener("click", (e) => {
 
-    if (sortDropdown && !sortDropdown.contains(e.target) && e.target !== sortToggleBtn && !sortToggleBtn?.contains(e.target)) {
-        sortDropdown.classList.remove("open");
-    }
-
-    if (exploreDropdown && !exploreDropdown.contains(e.target) && e.target !== exploreToggleBtn && !exploreToggleBtn?.contains(e.target)) {
-        exploreDropdown.classList.remove("open");
-        exploreToggleBtn?.classList.remove("open");
+    if (megaDropdown && !megaDropdown.contains(e.target) && e.target !== menuToggleBtn && !menuToggleBtn?.contains(e.target)) {
+        closeMenu();
     }
 
 });

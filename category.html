@@ -62,82 +62,84 @@
 
         <div class="category-filter-bar">
 
-            <div class="dropdown-wrap">
+            <div class="merged-filter-pill">
 
-                <button class="filter-icon-btn" id="sortToggleBtn">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+                <div class="dropdown-wrap" id="menuWrap">
 
-                <div class="sort-dropdown" id="sortDropdown">
-
-                    <button class="sort-option" data-sort="alpha-asc">
-                        <i class="fa-solid fa-arrow-down-a-z"></i> Sort alphabetically ascending
+                    <button class="filter-icon-btn" id="menuToggleBtn">
+                        <i class="fa-solid fa-chevron-down"></i>
                     </button>
 
-                    <button class="sort-option" data-sort="alpha-desc">
-                        <i class="fa-solid fa-arrow-up-a-z"></i> Sort alphabetically descending
-                    </button>
+                    <div class="mega-dropdown" id="megaDropdown">
 
-                    <button class="sort-option" data-sort="discount-asc">
-                        <i class="fa-solid fa-arrow-down-1-9"></i> Sort Discount Percent (Low-High)
-                    </button>
+                        <div class="mega-section" id="megaCategoryList">
 
-                    <button class="sort-option" data-sort="discount-desc">
-                        <i class="fa-solid fa-arrow-up-1-9"></i> Sort Discount Percent (High-Low)
-                    </button>
+                            <a href="category.html?category=Fashion">Fashion</a>
+                            <a href="category.html?category=Food">Food</a>
+                            <a href="category.html?category=Jewellery">Jewellery</a>
+                            <a href="category.html?category=Health%20%26%20Beauty">Health &amp; Beauty</a>
+                            <a href="category.html?category=Travel">Travel</a>
+                            <a href="category.html?category=Luxury%20Brands">Luxury Brands</a>
+                            <a href="category.html?category=Electronics">Electronics</a>
+                            <a href="category.html?category=Accessories">Accessories</a>
+                            <a href="category.html?category=Subscription">Subscription</a>
+                            <a href="category.html?category=Hotels">Hotels</a>
+                            <a href="category.html?category=Home%20Furnishing">Home Furnishing</a>
+                            <a href="category.html?category=Gaming">Gaming</a>
+                            <a href="category.html?category=Grocery">Grocery</a>
+                            <a href="category.html?category=Shopping">Shopping</a>
+                            <a href="category.html?category=Entertainment">Entertainment</a>
+                            <a href="category.html?category=Online%20Shopping">Online Shopping</a>
+                            <a href="category.html?category=Footwear">Footwear</a>
+                            <a href="category.html?category=Kids">Kids</a>
+                            <a href="category.html?category=Gifting">Gifting</a>
+                            <a href="category.html?category=Pharmacy">Pharmacy</a>
+                            <a href="category.html?category=Sports%20%26%20Fitness">Sports &amp; Fitness</a>
 
-                    <button class="sort-option active" data-sort="popularity">
-                        Sort Popularity
-                    </button>
+                        </div>
+
+                        <div class="mega-divider">Filters</div>
+
+                        <div class="mega-section">
+
+                            <button class="sort-option" data-sort="alpha-asc">
+                                <i class="fa-solid fa-arrow-down-a-z"></i> Sort alphabetically ascending
+                            </button>
+
+                            <button class="sort-option" data-sort="alpha-desc">
+                                <i class="fa-solid fa-arrow-up-a-z"></i> Sort alphabetically descending
+                            </button>
+
+                            <button class="sort-option" data-sort="discount-asc">
+                                <i class="fa-solid fa-arrow-down-1-9"></i> Sort Discount Percent (Low-High)
+                            </button>
+
+                            <button class="sort-option" data-sort="discount-desc">
+                                <i class="fa-solid fa-arrow-up-1-9"></i> Sort Discount Percent (High-Low)
+                            </button>
+
+                            <button class="sort-option active" data-sort="popularity">
+                                Sort by Popularity
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="filter-scroll" id="filterScroll">
 
-            <div class="dropdown-wrap explore-wrap">
-
-                <button class="filter-pill explore-pill" id="exploreToggleBtn">
-                    Explore More <i class="fa-solid fa-chevron-down"></i>
-                </button>
-
-                <div class="explore-dropdown" id="exploreDropdown">
-
-                    <a href="category.html?category=Fashion">Fashion</a>
-                    <a href="category.html?category=Food">Food</a>
-                    <a href="category.html?category=Jewellery">Jewellery</a>
-                    <a href="category.html?category=Health%20%26%20Beauty">Health &amp; Beauty</a>
-                    <a href="category.html?category=Travel">Travel</a>
-                    <a href="category.html?category=Luxury%20Brands">Luxury Brands</a>
-                    <a href="category.html?category=Electronics">Electronics</a>
-                    <a href="category.html?category=Accessories">Accessories</a>
-                    <a href="category.html?category=Subscription">Subscription</a>
-                    <a href="category.html?category=Hotels">Hotels</a>
-                    <a href="category.html?category=Home%20Furnishing">Home Furnishing</a>
-                    <a href="category.html?category=Gaming">Gaming</a>
-                    <a href="category.html?category=Grocery">Grocery</a>
-                    <a href="category.html?category=Shopping">Shopping</a>
-                    <a href="category.html?category=Entertainment">Entertainment</a>
-                    <a href="category.html?category=Online%20Shopping">Online Shopping</a>
-                    <a href="category.html?category=Footwear">Footwear</a>
-                    <a href="category.html?category=Kids">Kids</a>
-                    <a href="category.html?category=Gifting">Gifting</a>
-                    <a href="category.html?category=Pharmacy">Pharmacy</a>
-                    <a href="category.html?category=Sports%20%26%20Fitness">Sports &amp; Fitness</a>
+                    <a href="category.html?category=Fashion" class="filter-pill">Fashion</a>
+                    <a href="category.html?category=Food" class="filter-pill">Food</a>
+                    <a href="category.html?category=Jewellery" class="filter-pill">Jewellery</a>
+                    <a href="category.html?category=Health%20%26%20Beauty" class="filter-pill">Health &amp; Beauty</a>
+                    <a href="category.html?category=Travel" class="filter-pill">Travel</a>
+                    <a href="category.html?category=Luxury%20Brands" class="filter-pill">Luxury Brands</a>
+                    <a href="category.html?category=Electronics" class="filter-pill">Electronics</a>
+                    <a href="category.html?category=Accessories" class="filter-pill">Accessories</a>
 
                 </div>
-
-            </div>
-
-            <div class="filter-scroll" id="filterScroll">
-
-                <a href="category.html?category=Fashion" class="filter-pill">Fashion</a>
-                <a href="category.html?category=Food" class="filter-pill">Food</a>
-                <a href="category.html?category=Jewellery" class="filter-pill">Jewellery</a>
-                <a href="category.html?category=Health%20%26%20Beauty" class="filter-pill">Health &amp; Beauty</a>
-                <a href="category.html?category=Travel" class="filter-pill">Travel</a>
-                <a href="category.html?category=Luxury%20Brands" class="filter-pill">Luxury Brands</a>
-                <a href="category.html?category=Electronics" class="filter-pill">Electronics</a>
-                <a href="category.html?category=Accessories" class="filter-pill">Accessories</a>
 
             </div>
 

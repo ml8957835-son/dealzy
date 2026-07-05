@@ -3426,16 +3426,93 @@ color:rgba(255,255,255,.8);
 
 /* ---------- CATEGORY PAGE FILTER BAR: single scrollable row ---------- */
 @media (max-width:768px){
+.category-filter-bar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
-    .category-filter-bar{
-        flex-wrap:nowrap;
-        overflow-x:auto;
-        justify-content:flex-start;
-        gap:10px;
-        padding-bottom:8px;
-        -webkit-overflow-scrolling:touch;
-    }
+.merged-filter-pill{
+    display:flex;
+    align-items:center;
+    background:#f5f5f5;
+    border-radius:40px;
+    padding:6px;
+    gap:4px;
+    width:100%;
+    max-width:100%;
+}
 
+.merged-filter-pill .filter-icon-btn{
+    background:white;
+    flex-shrink:0;
+}
+
+.merged-filter-pill .filter-icon-btn.open i{
+    transform:rotate(180deg);
+    transition:.2s;
+}
+
+.merged-filter-pill .filter-scroll{
+    background:transparent;
+    border-radius:0;
+    flex:1;
+    min-width:0;
+    padding:6px 4px;
+}
+
+.mega-dropdown{
+    display:none;
+    position:absolute;
+    top:calc(100% + 10px);
+    left:0;
+    background:white;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    padding:10px;
+    z-index:300;
+    flex-direction:column;
+    width:280px;
+    max-height:70vh;
+    overflow-y:auto;
+}
+
+.mega-dropdown.open{
+    display:flex;
+}
+
+.mega-section{
+    display:flex;
+    flex-direction:column;
+}
+
+.mega-section a{
+    padding:13px 16px;
+    border-radius:10px;
+    color:#333;
+    font-size:15px;
+}
+
+.mega-section a:hover{
+    background:#f5f5f5;
+}
+
+.mega-section a.active{
+    background:#111;
+    color:white;
+}
+
+.mega-divider{
+    padding:14px 16px 6px;
+    font-size:13px;
+    font-weight:600;
+    color:#9a9a9a;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+    border-top:1px solid #eee;
+    margin-top:6px;
+}
+   
     .category-filter-bar::-webkit-scrollbar{
         display:none;
     }
@@ -3448,26 +3525,10 @@ color:rgba(255,255,255,.8);
         flex-shrink:0;
     }
 
-    .filter-pill.explore-pill{
-        flex-shrink:0;
-        white-space:nowrap;
-        padding:10px 16px;
-        font-size:13px;
-        gap:6px;
-    }
+    
 
-    .filter-scroll{
-        flex-shrink:0;
-        width:auto;
-    }
+
 
     /* keep the popup dropdowns from overflowing off-screen on narrow phones */
-    .explore-dropdown{
-        max-width:calc(100vw - 40px);
-    }
-
-    .sort-dropdown{
-        max-width:calc(100vw - 40px);
-    }
-
+   
 }
