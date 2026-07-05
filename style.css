@@ -3141,16 +3141,103 @@ color:rgba(255,255,255,.8);
 
 @media (max-width:768px){
 
-    .amount-row{
+    .redeem-buttons{
 
         flex-direction:column;
 
     }
 
-    .redeem-buttons{
+    /* Gift card mockup */
+    .gift-card-mockup{
+        min-height:190px;
+        padding:22px;
+    }
 
-        flex-direction:column;
+    .card-brand-logo{
+        font-size:24px;
+    }
 
+    .card-gift-label{
+        top:22px;
+        right:18px;
+        font-size:11px;
+        letter-spacing:2px;
+    }
+
+    .card-watermark{
+        bottom:18px;
+        left:22px;
+        font-size:14px;
+        gap:6px;
+    }
+
+    .card-validity{
+        bottom:20px;
+        right:18px;
+        font-size:11px;
+    }
+
+    .redeem-online-pill{
+        padding:10px 18px;
+        font-size:13px;
+        margin-top:16px;
+    }
+
+    /* Buy box header row — wrap instead of overflowing off-screen */
+    .buy-header-row{
+        flex-wrap:wrap;
+        gap:8px 16px;
+        margin-bottom:4px;
+    }
+
+    .product-buybox h1{
+        font-size:26px;
+    }
+
+    .buy-discount-inline{
+        font-size:19px;
+    }
+
+    .buy-category{
+        font-size:14px;
+        margin-bottom:18px;
+    }
+
+    /* Amount + quantity stay side-by-side, just shrink to fit */
+    .amount-row{
+        gap:10px;
+        margin-bottom:18px;
+    }
+
+    .amount-select{
+        padding:12px 16px;
+        font-size:16px;
+    }
+
+    .qty-chip{
+        padding:9px 12px;
+        gap:8px;
+    }
+
+    .qty-chip button{
+        width:24px;
+        height:24px;
+        font-size:15px;
+    }
+
+    .qty-chip span{
+        font-size:14px;
+        min-width:20px;
+    }
+
+    .redeem-info-row{
+        gap:10px;
+        margin-top:16px;
+    }
+
+    .solid-pill-btn{
+        padding:13px 14px;
+        font-size:14px;
     }
 
 }
