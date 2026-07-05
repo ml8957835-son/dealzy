@@ -2949,7 +2949,11 @@ color:rgba(255,255,255,.8);
     /* HERO */
     .hero{ padding:20px 0 0; }
     .hero-container{ gap:25px; }
-    .hero-banner img{ height:220px; }
+
+    /* Hide hero banner image on phones (still shows on laptop/iPad) */
+    .hero-banner{ display:none; }
+    .hero-container{ grid-template-columns:1fr; }
+
     .hero-content h1{
         font-size:28px;
         line-height:1.25;
@@ -3072,6 +3076,5 @@ color:rgba(255,255,255,.8);
     .hero-content h1{ font-size:24px; }
     .section-title{ font-size:20px; }
     .deal-card, .brand-card{ min-width:160px; }
-    .category-grid, .all-grid{ grid-template-columns:1fr; }
     .search-bar{ width:32%; }
 }
